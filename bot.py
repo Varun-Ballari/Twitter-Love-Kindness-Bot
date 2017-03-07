@@ -4,9 +4,6 @@ import os
 import tweepy
 from random import randint
 
-# from our keys module (keys.py), import the keys dictionary
-from keys import keys
-
 CONSUMER_KEY = os.environ.get('consumer_key')
 CONSUMER_SECRET = os.environ.get('consumer_secret')
 ACCESS_TOKEN = os.environ.get('access_token')
