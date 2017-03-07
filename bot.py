@@ -1,15 +1,16 @@
 #!/usr/bin/env python
 
+import os
 import tweepy
 from random import randint
 
 # from our keys module (keys.py), import the keys dictionary
 from keys import keys
 
-CONSUMER_KEY = keys['consumer_key']
-CONSUMER_SECRET = keys['consumer_secret']
-ACCESS_TOKEN = keys['access_token']
-ACCESS_TOKEN_SECRET = keys['access_token_secret']
+CONSUMER_KEY = os.environ.get('consumer_key')
+CONSUMER_SECRET = os.environ.get('consumer_secret')
+ACCESS_TOKEN = os.environ.get('access_token')
+ACCESS_TOKEN_SECRET = os.environ.get('access_token_secret')
 
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
